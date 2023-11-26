@@ -1,0 +1,10 @@
+^C:\USERS\SASHA\DESKTOP\PROJECT\CMAKELISTS.TXT
+setlocal
+D:\CMake\bin\cmake.exe -SC:/Users/sasha/Desktop/project -BC:/Users/sasha/Desktop/project/build --check-stamp-file C:/Users/sasha/Desktop/project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
